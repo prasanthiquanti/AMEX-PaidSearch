@@ -6,26 +6,27 @@
   }
 
   .cc-heading>h1{
-    margin: 30px 0px;
+    margin: 40px 0 15px;
   }
 
   .card-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #fff;
     position: sticky;
-    bottom: 0;
+    top: 0;
     z-index: 1;
+    margin: 25px 0;
    
   }
   
-  .card-section > div {
+  .card-section>div {
     text-align: center;
-    margin: 10px;
-    position: relative; /* Add relative positioning to the divs */
-    width: 120px; /* Set a fixed width for each card */
-    height: 100px; /* Set a fixed height for each card */
+    position: relative;
+    width: 155px;
+    height: 100px;
+    margin: auto;
   }
   
   .card-section img {
@@ -45,19 +46,17 @@
   
   
   .close-button{
-    color: #006fcf;
-  border: 1px solid #006fcf;
-  width: 16px;
-  height: 16px;
-  font-size: 10px;
-  border-radius: 100%;
-  line-height: 10px;
-  font-weight: 800;
-  
-  /* Position the close button in the top-right corner of the card */
-  position: absolute;
-  right: 0px; /* Adjust this value to control horizontal position */
-  top: 0px; /* Adjust this value to control vertical position */
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    border-radius: 100%;
+    line-height: 10px;
+    font-weight: 800;
+    position: absolute;
+    background: #006fcf;
+    right: -15px;
+    top: -15px;
   }
 
 
@@ -98,3 +97,30 @@
  .cc-cardcontainer{
   display: none;
  }
+
+ .compare-cards {
+  table-layout: fixed;
+ }
+ .compare-cards tr:nth-child(even) {
+  background-color: #f7f8f9;
+}
+
+.compare-cards th,
+.compare-cards td {
+  padding: 15px;
+}
+
+.compare-cards td {
+  text-align: center;
+}
+.compare-cards .fa-check {
+  width: 28px;
+  height: 28px;
+  color: #006fcf;
+}
+
+.compare-cards .fa-xmark {
+  width: 28px;
+  height: 28px;
+  color: #b42c01;
+}

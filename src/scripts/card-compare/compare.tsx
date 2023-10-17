@@ -130,9 +130,10 @@ console.log(updatedFilteredCards)
 
 
   return (
-    <div>
+    <div className="compare_wrap">
      {flag?(
-     <div>
+     <div className="container">
+      <div className="top-section">
           <div className="cc-heading">
             <h1>Compare Cards</h1>
             <p>
@@ -141,6 +142,7 @@ console.log(updatedFilteredCards)
             </p>
           </div>
           <div className="card-section">
+            <div> </div>
             {filteredCards.map((item: any) => (
               <div>
                 <a onClick={() =>setFlag(false)}>
@@ -161,7 +163,9 @@ console.log(updatedFilteredCards)
 
             ))}
           </div>
-          <table>
+          </div>
+          
+          <table className="compare-cards">
             <tr>
               <th>Annual Fee</th>
               {filteredCards.map((item: any) => (
@@ -177,7 +181,7 @@ console.log(updatedFilteredCards)
             <tr>
               <th>Welcome Offer</th>
               {filteredCards.map((item: any, idx: any) => (
-                <td>
+                <td className='text-align-left'>
                   {item.welcomeOffer
                     ? item.welcomeOffer.map((i: any, idx: any) => (
                         <CardCompareContentNode key={`${idx}`} node={i} />
@@ -189,7 +193,7 @@ console.log(updatedFilteredCards)
             <tr>
   
  
-    <td>
+    <td >
       <h2>Highlights</h2>
     </td>
  
