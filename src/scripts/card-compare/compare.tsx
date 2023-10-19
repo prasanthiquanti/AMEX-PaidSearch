@@ -133,7 +133,7 @@ console.log(updatedFilteredCards)
     <div className="compare_wrap">
      {flag?(
      <div className="container">
-      <div className="top-section">
+      
           <div className="cc-heading">
             <h1>Compare Cards</h1>
             <p>
@@ -141,6 +141,7 @@ console.log(updatedFilteredCards)
               best card that suits your needs
             </p>
           </div>
+          
           <div className="card-section">
             <div> </div>
             {filteredCards.map((item: any) => (
@@ -163,7 +164,7 @@ console.log(updatedFilteredCards)
 
             ))}
           </div>
-          </div>
+          
           
           <table className="compare-cards">
             <tr>
@@ -190,12 +191,15 @@ console.log(updatedFilteredCards)
                 </td>
               ))}
             </tr>
-            <tr>
+            <tr className='heading'>
   
  
-    <td >
+    <th>
       <h2>Highlights</h2>
-    </td>
+    </th>
+    <td></td>
+    <td></td>
+    <td></td>
  
 </tr>
             <tr>
@@ -456,8 +460,8 @@ console.log(updatedFilteredCards)
          
     </div>
      ):(
-        <div>
-          <div className="cc-heading">
+        <div className="container">
+          <div className="cc-heading pick">
             <h1>{`Select Up to ${isMobile ? 2:3 } Cards`}</h1>
             <button class="compare-btn" onClick={()=>setFlag(true)}>
               Compare
@@ -465,7 +469,7 @@ console.log(updatedFilteredCards)
           </div>
 
           <div className="cc-container">
-            <div className={cx('col col-xs-12  col-md-6  pad-2')}>
+            <div className={cx('row ')}>
               <h2>Rewards</h2>
               {cards.length
                 ? cards
@@ -476,7 +480,7 @@ console.log(updatedFilteredCards)
                         data-content-id="card-selection"
                         data-card-id={item.id}
                         className={cx(
-                          `col col-xs-12  col-md-4  pad-2 ${
+                          `col ${
                             selectedCard.includes(item.id) ? 'highlighted' : ''
                           }`
                         )}
@@ -504,7 +508,7 @@ console.log(updatedFilteredCards)
                 : null}
             </div>
 
-            <div className={cx('col col-xs-12  col-md-4  pad-2')}>
+            <div className={cx('row ')}>
               <h2>Cash Back</h2>
               {cards.length
                 ? cards
@@ -515,7 +519,7 @@ console.log(updatedFilteredCards)
                         data-content-id="card-selection"
                         data-card-id={item.id}
                         className={cx(
-                          `col col-xs-12  col-md-8  pad-2 ${
+                          `col ${
                             selectedCard.includes(item.id) ? 'highlighted' : ''
                           }`
                         )}
@@ -542,7 +546,7 @@ console.log(updatedFilteredCards)
                     ))
                 : null}
             </div>
-            <div className={cx('col col-xs-12  col-md-4  pad-2')}>
+            <div className={cx('row ')}>
               <h2>Airline</h2>
               {cards.length
                 ? cards
@@ -553,7 +557,7 @@ console.log(updatedFilteredCards)
                         data-content-id="card-selection"
                         data-card-id={item.id}
                         className={cx(
-                          `col col-xs-6  col-md-8  pad-2 ${
+                          `col ${
                             selectedCard.includes(item.id) ? 'highlighted' : ''
                           }`
                         )}
@@ -580,7 +584,7 @@ console.log(updatedFilteredCards)
                     ))
                 : null}
             </div>
-            <div className={cx('col col-xs-12  col-md-4  pad-2')}>
+            <div className={cx('row ')}>
               <h2>Hotel</h2>
               {cards.length
                 ? cards
@@ -591,7 +595,7 @@ console.log(updatedFilteredCards)
                         data-content-id="card-selection"
                         data-card-id={item.id}
                         className={cx(
-                          `col col-xs-12  col-md-8  pad-2 ${
+                          `col  ${
                             selectedCard.includes(item.id) ? 'highlighted' : ''
                           }`
                         )}

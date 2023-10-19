@@ -820,7 +820,7 @@ export const CardFilterSection: FunctionComponent<CardSectionProps> = ({
         
       </div>
       {selectedCard.length?
-      <div className="card-section">
+      <div className="card-section bottom_sticky">
     {filteredCards.map((item:any) => (
           <div>
           {item.id?

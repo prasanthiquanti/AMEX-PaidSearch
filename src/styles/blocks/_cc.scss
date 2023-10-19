@@ -1,113 +1,175 @@
+.cc-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-  .cc-heading{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.cc-heading > h1 {
+  margin: 40px 0 15px;
+}
 
-  .cc-heading>h1{
-    margin: 40px 0 15px;
-  }
+.card-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 30px 0;
+  border-bottom: 1px solid #ddd;
+  min-width: 700px;
+  gap: 15px;
+  overflow: auto;
+}
 
-  .card-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    margin: 25px 0;
-   
-  }
-  
-  .card-section>div {
-    text-align: center;
-    position: relative;
-    width: 155px;
-    height: 100px;
-    margin: auto;
-  }
-  
-  .card-section img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    position: absolute; /* Add absolute positioning to the images */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
-    min-width: 80px; /* Adjust this value as needed */
+.card-section > div {
+  text-align: center;
+  position: relative;
+  width: 165px;
+  height: 110px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.card-section img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  position: absolute; /* Add absolute positioning to the images */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+  min-width: 80px; /* Adjust this value as needed */
   min-height: 50px;
-  }
-  
-  
-  .close-button{
-    color: #fff;
-    width: 24px;
-    height: 24px;
-    font-size: 12px;
-    border-radius: 100%;
-    line-height: 10px;
-    font-weight: 800;
-    position: absolute;
-    background: #006fcf;
-    right: -15px;
-    top: -15px;
-  }
+}
 
+.close-button {
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  border-radius: 100%;
+  line-height: 10px;
+  font-weight: 800;
+  position: absolute;
+  background: #006fcf;
+  right: -12px;
+  top: -12px;
+  z-index: 1;
+}
 
-  .highlight{
-    cursor:pointer;
-  }
+.highlight {
+  cursor: pointer;
+}
 
-  .highlighted {
-    background-color: #e5f0fa /* Change the background color when highlighted */
-  }
-  /* Add more styles for your comparison view as needed */
-  
-  .addCard{
-    display: flex;
-    justify-content: center;
-  }
+.highlighted {
+  background-color: #e5f0fa; /* Change the background color when highlighted */
+}
+/* Add more styles for your comparison view as needed */
 
-  .addCard>span{
-    margin-left: 10px;
-  }
+.addCard {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 0;
+}
 
- .compare-btn{
+.addCard > span {
+  margin-left: 10px;
+}
+
+.addCard input[type='checkbox'] {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  top: 2px;
+}
+
+.compare-btn {
   padding: 10px 20px;
   background-color: #006fcf;
   color: #fff;
   border-radius: 6px;
- }
+}
 
- .cc-container>div{
-  display:flex;
- }
+.cc-container .row {
+  display: flex;
+  margin: 0 0 40px;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
 
- .cc-container>div>h2{
+.cc-container .row * {
+  flex-basis: 20%;
+  margin: 0;
+  padding: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.cc-container .row h2 {
+  flex-basis: 15%;
+  align-items: center;
+  display: flex;
+}
+.cc-container .row a {
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+.cc-container .row a:hover {
+  background: #ddd;
+}
+.cc-container .row a h3 {
+  margin-top: 15px !important;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.cc-container > div {
+  display: flex;
+}
+
+.cc-container > div > h2 {
   padding: 30px;
   margin-right: 30px;
- }
+}
 
- .cc-cardcontainer{
+.cc-cardcontainer {
   display: none;
- }
+}
 
- .compare-cards {
+.compare-cards {
   table-layout: fixed;
- }
- .compare-cards tr:nth-child(even) {
+  min-width: 700px;
+  overflow: auto;
+}
+.compare-cards tr:nth-child(even) {
   background-color: #f7f8f9;
 }
 
 .compare-cards th,
 .compare-cards td {
   padding: 15px;
+}
+
+.compare-cards tr th {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.compare-cards tr:nth-child(even) th {
+  background-color: #f7f8f9;
 }
 
 .compare-cards td {
@@ -123,4 +185,74 @@
   width: 28px;
   height: 28px;
   color: #b42c01;
+}
+
+.vcp_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-section.bottom_sticky {
+  border-top: 1px solid #ddd;
+  border-bottom: none;
+  bottom: 0;
+  top: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.compare-cards tr.heading {
+  background: #fff;
+}
+.compare-cards tr.heading th {
+  text-align: left;
+  background: #fff;
+  position: sticky;
+}
+.compare-cards tr.heading h2 {
+  font-weight: 700;
+}
+
+.cc-heading.pick{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px 0;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+  width: 100%;
+}
+
+.cc-heading.pick h1 {
+  margin: 0;
+  line-height: normal;
+}
+
+@media only screen and (max-width: 767px) {
+  .compare-cards tr th,
+  .card-section > div:nth-child(1) {
+    width: 120px;
+    margin: 0;
+  }
+  .card-section > div {
+    width: 135px;
+    height: 80px;
+  }
+  .compare_wrap {
+    overflow: auto;
+  }
+  .cc-container .row {
+    flex-direction: column;
+  }
+  .cc-container .row h2,
+  .cc-container .row * {
+    flex-basis: 100%;
+  }
+  .cc-heading.pick{
+    flex-direction: column;
+  }
 }
